@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+ <bean id="XmlBean" class="com.example.bean.XmlBean">
+ 	<property name="pname" value="xiaoming"></property>
+ 	<property name="age" value="22"></property>
+ </bean>
+ 
+ <bean id="Example" class="com.example.bean.ExampleBean" init-method="start" destroy-method="stop">
+ 	<property name="school" value="buu"></property>
+ 	<property name="snum" value="21"></property>
+ 	<property name="xb" ref="XmlBean"></property>
+	<!-- <constructor-arg name="school" value="buu2"></constructor-arg> -->
+ </bean>
+ <bean id="HelloWorldService" class="com.example.service.HelloWorldService">
+ 	
+ </bean> 
+</beans>
